@@ -112,10 +112,10 @@ public class SustentacionYerson {
                                 deportista[k]=deportista[k+1];
                             }
                             numdep=numdep-1;
-                            break;
+                            
                         }
                         else{
-                            System.out.println("Estudiante no encontrado\n\n");
+                            System.out.println("El deportista no se encuentra en la base de datos \n\n");
                             break;
                         }
                     }
@@ -134,8 +134,8 @@ public class SustentacionYerson {
                             System.out.println("Año de nacimiento: "+deportista[i].getAño());
                             System.out.println("Edad: "+deportista[i].getEdad());
                             System.out.println("Clasificacion: "+deportista[i].getClasificacion());
-                      //      System.out.println("Nota4: "+Estudiantes[i].getN4());
-                      //      System.out.println("NotaDef: "+Estudiantes[i].getNotaf());
+                            System.out.println("Competencia: "+deportista[i].getCompetencia()+"\n \t 1. Libre 2.Mariposa 3.pecho 4.espalda");
+
                       System.out.println("\n\n");
                             break;
                         }
@@ -181,9 +181,11 @@ public class SustentacionYerson {
                     for (int i=0;i<numdep;i++){
                         if (cedula2findb2.equals(deportista[i].getDocumento())){
                         deportista[i].setCompetencia(0);
+                        
                         break;
                         }else{
                             System.out.println("\nDeportista no encontrado\n\n");
+                            
                             
                         }
                     }break;

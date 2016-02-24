@@ -81,4 +81,5 @@ public class Gestion {
         this.competencia=opcion;
     } 
         
+    
 }
