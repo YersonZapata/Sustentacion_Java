@@ -112,11 +112,11 @@ public class SustentacionYerson {
                                 deportista[k]=deportista[k+1];
                             }
                             numdep=numdep-1;
-                            
-                        }
-                        else{
-                            System.out.println("El deportista no se encuentra en la base de datos \n\n");
                             break;
+                        }
+                        else if(i==numdep){
+                            System.out.println("El deportista no se encuentra en la base de datos \n\n");
+                            
                         }
                     }
                     break;
@@ -139,7 +139,7 @@ public class SustentacionYerson {
                       System.out.println("\n\n");
                             break;
                         }
-                        else{
+                        else if (i==numdep){
                             System.out.println("El deportista no se encuentra en la base de datos \n\n");
                         }
                     }
