@@ -57,10 +57,9 @@ public class SustentacionYerson {
                 System.out.print("Ingrese Año de nacimiento: ");
                 int añotemp = cs.nextInt();
                 deportista[numdep].setAño(añotemp);
+                deportista[numdep].setClasificacion();
                 cs.nextLine();//----------------------revisar
-                System.out.print("Ingrese la clasificacion: ");
-                String clastemp = cs.next();
-                deportista[numdep].setClasificacion(clastemp);
+                
                 numdep++;
                 break;
                 
@@ -88,10 +87,9 @@ public class SustentacionYerson {
                 System.out.print("Ingrese Año de nacimiento: ");
                 int añotemp2 = cs.nextInt();
                 deportista[i].setAño(añotemp2);
+                deportista[i].setClasificacion();
                 cs.nextLine();//----------------------revisar
-                System.out.print("Ingrese la clasificacion: ");
-                String clastemp2 = cs.next();
-                deportista[i].setClasificacion(clastemp2);
+                
                       System.out.println("\n\n");
                             break;
                         }
@@ -114,7 +112,7 @@ public class SustentacionYerson {
                             numdep=numdep-1;
                             break;
                         }
-                        else if(i==numdep){
+                        else if(i==numdep-1){
                             System.out.println("El deportista no se encuentra en la base de datos \n\n");
                             
                         }
@@ -134,12 +132,12 @@ public class SustentacionYerson {
                             System.out.println("Año de nacimiento: "+deportista[i].getAño());
                             System.out.println("Edad: "+deportista[i].getEdad());
                             System.out.println("Clasificacion: "+deportista[i].getClasificacion());
-                            System.out.println("Competencia: "+deportista[i].getCompetencia()+"\n \t 1. Libre 2.Mariposa 3.pecho 4.espalda");
+                            System.out.println("Competencia: "+deportista[i].getCompetencia()+"\n \t 0.No aplica 1. Libre 2.Mariposa 3.pecho 4.espalda");
 
                       System.out.println("\n\n");
                             break;
                         }
-                        else if (i==numdep){
+                        else if (i==numdep-1){
                             System.out.println("El deportista no se encuentra en la base de datos \n\n");
                         }
                     }
@@ -183,7 +181,7 @@ public class SustentacionYerson {
                         deportista[i].setCompetencia(0);
                         
                         break;
-                        }else{
+                        }else if(i==numdep-1){
                             System.out.println("\nDeportista no encontrado\n\n");
                             
                             

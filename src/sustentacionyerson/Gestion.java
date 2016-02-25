@@ -69,8 +69,18 @@ public class Gestion {
         return clasificacion;
     }
 
-    public void setClasificacion(String clasificacion) {
-        this.clasificacion = clasificacion;
+    public void setClasificacion() {
+        if(this.edad>=6 && this.edad<=6){
+        this.clasificacion = "Infantil A";
+        }else if(this.edad>=11 && this.edad<=17){
+        this.clasificacion = "Infantil B";    
+        }else if (this.edad>=18 && this.edad<=25){
+        this.clasificacion = "Juvenil";    
+        } else if (this.edad>=25){
+        this.clasificacion = "Senior";    
+        } else {
+        this.clasificacion = "No aplica";    
+        }
     }     
 
     public int getCompetencia() {
